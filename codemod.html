@@ -35,180 +35,84 @@
    <center> <body>
 
 <body>
-
 <head>
-
 <style>
-
 body {
-
   font-family: Arial, Helvetica, sans-serif;
-
 }
-
-
-
 .navbar {
-
   overflow: hidden;
-
   background-color: #B2F7FF;
-
 }
-
-
-
 .navbar a {
-
   float: left;
-
   font-size: 16px;
-
   color: white;
-
   text-align: center;
-
   padding: 14px 190px;
-
   text-decoration: none;
-
 }
-
-
-
 .dropdown {
-
   float: left;
-
   overflow: hidden;
-
 }
-
-
-
 .dropdown .dropbtn {
-
-  font-size: 16px;  
-
+  font-size: 16px; 
   border: none;
-
   outline: none;
-
   color: white;
-
   padding: 14px 190px;
-
   background-color: inherit;
-
   font-family: inherit;
-
   margin: 0;
-
 }
-
-
-
 .navbar a:hover, .dropdown:hover .dropbtn {
-
   background-color: #4AE2F3  ;
-
 }
-
-
-
 .dropdown-content {
-
   display: none;
-
   position: absolute;
-
   background-color: #f9f9f9;
-
   min-width: 90px;
-
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
   z-index: 1;
-
 }
-
-
-
 .dropdown-content a {
-
   float: none;
-
   color: #B2F7FF;
-
   padding: 12px 140px;
-
   text-decoration: none;
-
   display: block;
-
   text-align: center;
-
 }
-
-
-
 .dropdown-content a:hover {
-
   background-color: #ddd;
-
 }
-
-
-
 .dropdown:hover .dropdown-content {
-
   display: block;
-
 }
-
 </style>
-
 </head>
-
   <body>
-
-
-
 <div class="navbar">
-
   <a href="https://katherinetran.github.io/">Home</a>
-
 <a href="K.T. Resume (1).pdf">Resume</a>
-
   <div class="dropdown">
-
     <button class="dropbtn">Projects 
-
       <i class="fa fa-caret-down"></i>
-
     </button>
-
     <div class="dropdown-content">
-
       <a href="tinkercadphonestand.html">Phone Stand</a>
-
       <a href="tinkercadhouse.html">House</a>
-
       <a href="tinkercadcar.html">Car</a>
-
       <a href="pingpongballslinger101.html">Ping Pong Ball Slinger</a>
       <a href="codemod.html">Processing Code Review</a>
-
     </div>
-
   </div> 
-
 </div>
 
 
     <div class="container-narrow">
-
-
 
       <div class="content">
 
@@ -232,55 +136,9 @@ body {
     <img src="green.PNG">
     <img src="teal.PNG"></center>
      <center><p> Take a look at the code used to make the game. </center></p>
-     <center><p> void setup() {
-  size(500, 500);
-  noStroke();
-}
-
-int circleX = 50;
-int circleY = 50;
-PImage img;
-
-
-void draw() {
-  img = loadImage("background.jpg");
-    image(img, 0,0, width, height);
-  textSize(36);
-  text("NENENE You can't catch me", 10, 75);
-    if (mouseX<250 && mouseY<250){
-    fill(0, 0, 255);
-  }
-  if (mouseX>250 && mouseY<250){
-    fill(0, 255, 0);
-  }
-  if (mouseX<250 && mouseY>250){
-    fill(255, 0, 0);
-  }
-  if (mouseX>250 && mouseY>250){
-    fill(0, 255, 255);
-  }
-  stroke(12);
-  ellipse(circleX, circleY, int(random(0,100)), int(random(0,100)));
-  ellipse(mouseX, mouseY, 50, 50);
-  checkCollision(circleX, circleY, mouseX, mouseY);
-  checkTime();
-  }
-
-
-void checkCollision(int ellipseX, int ellipseY, int ellipseX2, int ellipseY2) {
-  if (dist(ellipseX, ellipseY, ellipseX2, ellipseY2) < 50) {
-    circleX = int(random(0, 400));
-    circleY = int(random(0, 400));
-  }
-}
-
-void checkTime() {
-  if (frameCount %30 == 0) {
-    circleX = int(random(0, 400));
-    circleY = int(random(0, 400));
-    }
-}
-</center></p>
+  <center>  <img src="pt1.PNG">
+     <img src="pt2.PNG">
+    </center>
       </div>
       <hr>
       <footer>
