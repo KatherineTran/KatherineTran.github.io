@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <body style="background-color: #B2F7FF;">
+    <meta charset="utf-8">
+    <title>NENENE You Can't Catch Me</title>
+    <meta name="description" content="Your Webpage Description">
+    <meta name="author" content="Katherine Tran">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=3.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <!-- For now, feel free to just keep this as is. These are stylesheets that set up things like the font -->
+
+    <link href="https://kbroman.org/simple_site/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="https://kbroman.org/simple_site/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://kbroman.org/simple_site/assets/themes/twitter/css/kbroman.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+
+    <!-- atom & rss feed -->
+    <link href="https://kbroman.org/simple_sitenil" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="https://kbroman.org/simple_sitenil" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+   <center> <body>
+
+<body>
+
+<head>
+
+<style>
+
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+.navbar {
+
+  overflow: hidden;
+
+  background-color: #6FF8B7;
+
+}
+
+
+
+.navbar a {
+
+  float: left;
+
+  font-size: 16px;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 14px 190px;
+
+  text-decoration: none;
+
+}
+
+
+
+.dropdown {
+
+  float: left;
+
+  overflow: hidden;
+
+}
+
+
+
+.dropdown .dropbtn {
+
+  font-size: 16px;  
+
+  border: none;
+
+  outline: none;
+
+  color: white;
+
+  padding: 14px 190px;
+
+  background-color: inherit;
+
+  font-family: inherit;
+
+  margin: 0;
+
+}
+
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+
+  background-color: #65DCA6  ;
+
+}
+
+
+
+.dropdown-content {
+
+  display: none;
+
+  position: absolute;
+
+  background-color: #f9f9f9;
+
+  min-width: 90px;
+
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  z-index: 1;
+
+}
+
+
+
+.dropdown-content a {
+
+  float: none;
+
+  color: #00EBCF;
+
+  padding: 12px 140px;
+
+  text-decoration: none;
+
+  display: block;
+
+  text-align: center;
+
+}
+
+
+
+.dropdown-content a:hover {
+
+  background-color: #ddd;
+
+}
+
+
+
+.dropdown:hover .dropdown-content {
+
+  display: block;
+
+}
+
+</style>
+
+</head>
+
+  <body>
+
+
+
+<div class="navbar">
+
+  <a href="https://katherinetran.github.io/">Home</a>
+
+<a href="K.T. Resume (1).pdf">Resume</a>
+
+  <div class="dropdown">
+
+    <button class="dropbtn">Projects 
+
+      <i class="fa fa-caret-down"></i>
+
+    </button>
+
+    <div class="dropdown-content">
+
+      <a href="tinkercadphonestand.html">Phone Stand</a>
+
+      <a href="tinkercadhouse.html">House</a>
+
+      <a href="tinkercadcar.html">Car</a>
+
+      <a href="pingpongballslinger101.html">Ping Pong Ball Slinger</a>
+      <a href="codemod.html">Processing Code Review</a>
+
+    </div>
+
+  </div> 
+
+</div>
+
+
+    <div class="container-narrow">
+
+
+
+      <div class="content">
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+
+<div class="page-header">
+  <center><font color="#6cffb6  "> <h2>NENENE You Can't Catch Me </font></center></h2>
+</div>
+       
+<div class="row-fluid">
+  <div class="span12">
+    
+   <p>As a part of review, we are taking another look at Processing. We modified the code for the game in order to change the duration 
+   that the circle randomly appears at, the size of the  circle, the text size, the game name, the stroke around the  circle, the background.
+   We also modified it so that the the color of the circles changes based on the location of the mouse.</p>
+   <center>  <img src="catapult.jpg">
+     <img src="catapult2.jpg"></center>
+     <center><p> Take a look at the code used to make the game. </center></p>
+     <center><p> void setup() {
+  size(500, 500);
+  noStroke();
+}
+
+int circleX = 50;
+int circleY = 50;
+PImage img;
+
+
+void draw() {
+  img = loadImage("background.jpg");
+    image(img, 0,0, width, height);
+  textSize(36);
+  text("NENENE You can't catch me", 10, 75);
+    if (mouseX<250 && mouseY<250){
+    fill(0, 0, 255);
+  }
+  if (mouseX>250 && mouseY<250){
+    fill(0, 255, 0);
+  }
+  if (mouseX<250 && mouseY>250){
+    fill(255, 0, 0);
+  }
+  if (mouseX>250 && mouseY>250){
+    fill(0, 255, 255);
+  }
+  stroke(12);
+  ellipse(circleX, circleY, int(random(0,100)), int(random(0,100)));
+  ellipse(mouseX, mouseY, 50, 50);
+  checkCollision(circleX, circleY, mouseX, mouseY);
+  checkTime();
+  }
+
+
+void checkCollision(int ellipseX, int ellipseY, int ellipseX2, int ellipseY2) {
+  if (dist(ellipseX, ellipseY, ellipseX2, ellipseY2) < 50) {
+    circleX = int(random(0, 400));
+    circleY = int(random(0, 400));
+  }
+}
+
+void checkTime() {
+  if (frameCount %30 == 0) {
+    circleX = int(random(0, 400));
+    circleY = int(random(0, 400));
+    }
+}
+</center></p>
+      </div>
+      <hr>
+      <footer>
+        <p><small>
+          <a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://i.creativecommons.org/p/zero/1.0/88x31.png" alt="CC0"/></a> &nbsp;
+        </small></p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
